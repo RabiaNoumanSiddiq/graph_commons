@@ -1,0 +1,22 @@
+
+type Book {
+    id: ID!
+    title: String! @search(by: [term]) 
+    date: DateTime
+    format: String
+    iri: String
+    AUTHORED_BY: [Author]!
+    PUBLISHED_BY: Publisher!
+}
+
+type Author {
+  id: ID!
+  name: String! @search(by: [term])
+  iri: String
+}
+
+type Publisher {
+  id: ID!
+  name: String! @search(by: [term])
+  iri: String
+}

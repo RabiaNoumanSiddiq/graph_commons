@@ -1,0 +1,25 @@
+CONSTRUCT {
+  ?s ?p ?o
+}
+WHERE {
+    {
+        SERVICE <http://data.nobelprize.org/sparql> {
+            BIND (<http://data.nobelprize.org/resource/laureate/937> AS ?s)
+            ?s ?p ?o .
+        }
+    }
+    UNION
+    {
+        SERVICE <https://query.wikidata.org/bigdata/namespace/wdq/sparql> {
+            BIND (<http://www.wikidata.org/entity/Q392> AS ?s)
+            ?s ?p ?o .
+        }
+    }
+    UNION
+    {
+        SERVICE <https://dbpedia.org/sparql> {
+            BIND (<http://dbpedia.org/resource/Bob_Dylan> AS ?s)
+            ?s ?p ?o .
+        }
+    }
+}

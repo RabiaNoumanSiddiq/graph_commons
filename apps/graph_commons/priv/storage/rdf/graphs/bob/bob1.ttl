@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.nobelprize.org/resource/laureate/937>
+    a <http://data.nobelprize.org/terms/Laureate>, <http://xmlns.com/foaf/0.1/Person> ;
+    rdfs:label "Bob Dylan" ;
+    <http://data.nobelprize.org/terms/laureateAward> <http://data.nobelprize.org/resource/laureateaward/1009> ;
+    <http://data.nobelprize.org/terms/nobelPrize> <http://data.nobelprize.org/resource/nobelprize/Literature/2016> ;
+    <http://dbpedia.org/ontology/birthPlace> <http://data.nobelprize.org/resource/city/Duluth%2C_MN>, <http://data.nobelprize.org/resource/country/USA> ;
+    <http://dbpedia.org/property/dateOfBirth> "1941-05-24"^^xsd:date ;
+    <http://xmlns.com/foaf/0.1/birthday> "1941-05-24"^^xsd:date ;
+    <http://xmlns.com/foaf/0.1/familyName> "Dylan" ;
+    <http://xmlns.com/foaf/0.1/gender> "male" ;
+    <http://xmlns.com/foaf/0.1/givenName> "Bob" ;
+    <http://xmlns.com/foaf/0.1/name> "Bob Dylan" .

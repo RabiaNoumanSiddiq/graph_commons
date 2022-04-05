@@ -1,0 +1,27 @@
+name: string @index(term) .
+title: string @index(term) .
+date: dateTime .
+format: string @index(term) .
+iri: string @index(exact) .
+
+AUTHORED_BY: [uid] .
+PUBLISHED_BY: [uid] .
+
+type Book {
+  title
+  date
+  format
+  iri
+  AUTHORED_BY
+  PUBLISHED_BY
+}
+
+type Author {
+  name
+  iri
+}
+
+type Publisher {
+  name
+  iri
+}
